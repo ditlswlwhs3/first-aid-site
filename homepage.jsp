@@ -1,180 +1,126 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" href="css/bootstrap.css">
 <style>
-#top 
-{
-width  : 100%;
-height :25%;
-	}
-#left
-{
-width : 15%;
-height : 50%;
-float : left ;
-}
-
-#center
-{
-width : 60%;
-height : 50%;
-float : left ;
-}
-
-#right
-{
-width : 25%;
-height : 50%;
-float : right ;
-}
-#bottom
-{
-width :100%;
-heigth : 50px;
-float : absolute;
-}
-</style>
-</head>
-
-<body> 
-<div id=top> 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">first add</a>
-  <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor01" aria-label="Toggle navigation" type="button" data-target="#navbarColor01" data-toggle="collapse">
-    <span class="navbar-toggler-icon"></span>
-  </button> 
-</nav>
-</div>
-<div id=left>
-
-<ul class="nav nav-pills flex-column">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown">�޴�</a>
-    <div class="dropdown-menu" style="left: 0px; top: 0px; position: absolute; transform: translate3d(0px, 40px, 0px);" x-placement="bottom-start">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">�޴�</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">�޴�</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">�޴�</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">�޴�</a>
-  </li>
+h1{text-align:center;}
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   
-</ul>
+}
+.btn-group-vertical{float:left;
+width:200px; height:400px;}
 
+fieldset{
+margin-top:60px;
+}
+.right{
+position:relative;
+top:10px;
+float:right;
+padding:10px;
+border:1px solid green;
+width:25%;
+height:250px;
+margin:10px;
+margin-right:50px;
+background:url(deri1.png);
+color:blue;
+}
+
+ul li{letter-spacing: 10px;
+ padding-left:30px;
+
+ padding-right:50px;
+}
+p{text-align:center;}
+h2{text-align:center;}
+
+</style>
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<h1>emergency treatment site</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">메뉴1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">메뉴2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">메뉴3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">메뉴4</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<aside class="right">
+
+<fieldset>
+<legend>로그인</legend>
+ <form id="login" method="post" action="login_ok.jsp" name="form1" >
+           
+                    id:<input type="text" name="uid" placeholder="아이디" /><br />
+                    pw:<input type="password" name="pw" placeholder="비밀번호" /><br />
+                   
+                    <input type="reset" value="로그인" onclick="ck();"/>
+                    <a href="join.jsp"><input type="button" value="회원가입" /></a>
+                    <a href="id_search.jsp"><input type="button" value="id/pw찾기" /></a>
+                    
+                   
+                    </form>
+                    </fieldset>
+
+</aside>
+
+
+<div class="btn-group-vertical" data-toggle="buttons">
+  <button type="button" class="btn btn-primary">메뉴1</button>
+  <button type="button" class="btn btn-primary">메뉴2</button>
+  <button type="button" class="btn btn-primary">메뉴3</button>
+  <button type="button" class="btn btn-primary">메뉴4</button>
 </div>
 
-<div id="center">
-<table class="table table-hover" width = "500" height = "700">
-  <thead>
-    <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Column heading</th>
-      <th scope="col">Column heading</th>
-      <th scope="col">Column heading</th>
+<h2>Emphasis classes</h2>
+<p class="text-muted">sssssssssssssssssssssssssssssssssssssssss</p>
+<p class="text-primary">ssssssssssssssssssssssssssssssssssssssssssssssssssssssss.</p>
+<p class="text-secondary">ssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+<p class="text-warning">ssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+<p class="text-danger">ssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+<p class="text-success">sssssssssssssssssssssssssssssssssssssssssssssssssss.</p>
+
+
+<table class="table table-hover">
+ <tr class="table-primary">
+      <th><b>이종현</b></th>
+      <td><b>010-2222-2222</b></td>
+      <td><b>ditlswlwhs3@naver.com</b></td>
+      <td><b>오픈소스</b></td>
     </tr>
-  </thead>
-  <tbody>
-    <tr class="table-active">
-      <th scope="row">Active</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <th scope="row">Default</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
- 	</tr>
- 	<tr class="table-active">
-      <th scope="row">Active</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <th scope="row">Default</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
- 	</tr>
- 	<tr class="table-active">
-      <th scope="row">Active</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <th scope="row">Default</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
- 	</tr>
- 	<tr class="table-active">
-      <th scope="row">Active</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <th scope="row">Default</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
- 	</tr>
- 	<tr class="table-active">
-      <th scope="row">Active</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <th scope="row">Default</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
- 	</tr>   
-</tbody>
-</table>
-</div>
-<div id=right>
-  <legend>�α���</legend>
-  <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" type="email" placeholder="Enter email">
-       </div>
- 
-   
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
-    </div>
- </div>
- 
- <div id =bottom>
- <ol class="breadcrumb">
-  <li class="breadcrumb-item active">bottom</li>
-</ol>
-</div>
+</table> 
+
 </body>
 </html>
