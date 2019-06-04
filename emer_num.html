@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+.blinking{
+	-webkit-animation:blink 0.5s ease-in-out infinite alternate;
+    -moz-animation:blink 0.5s ease-in-out infinite alternate;
+    animation:blink 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+</style>
+
+<body style="background-color:black;text-align:center">
+<BR>
+<p1 style="color:white;font-size:40px">지금 만약 응급상황이시라면 </p1>
+<BR><BR>
+
+<font style="color:white;font-size:200px" class="image blinking">119 </p1>
+<pre style="color:white;font-size:60px">
+
+로 전화하세요 </pre>
+<form>
+<legend><input type="button" value="뒤로가기" onclick="history.back(-1);"class="btn btn-primary"></legend>
+
+</form>
+</body>
+</html>
